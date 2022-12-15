@@ -8,7 +8,7 @@ if(isset($_POST['tambah'])){
 	$_1		= mysqli_real_escape_string($koneksi,$_POST['_a']);
 	$_2		= mysqli_real_escape_string($koneksi,$_POST['_b']);
 	
-	$input	= mysqli_query($koneksi, "INSERT INTO a VALUES('', '$_1', '$_2')") or die(mysqli_error());
+	$input	= mysqli_query($koneksi, "INSERT INTO a VALUES(0, '$_1', '$_2')") or die(mysqli_error());
 	if($input){
 		echo 'Data berhasil di tambahkan!';
 		echo '<a href="tambah.php">Kembali</a>';
